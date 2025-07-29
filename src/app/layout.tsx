@@ -18,15 +18,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.className} min-h-screen flex flex-col`} suppressHydrationWarning>
         <Provider
           attribute="class"
           defaultTheme="system"
           enableSystem
+          disableTransitionOnChange={false}
           storageKey="theme"
         >
           <Header />
-          {children}
+          <main className="flex-1">
+            {children}
+          </main>
           <Footer />
         </Provider>
       </body>
