@@ -1,6 +1,6 @@
-export function Hero() {
+export default function Hero() {
   return (
-    <section className="min-h-screen bg-white dark:bg-green-800 text-gray-900 dark:text-white flex flex-col items-center justify-center p-8 text-center">
+    <section className="h-[80vh] bg-white  dark:bg-green-800 text-gray-900 dark:text-white flex flex-col items-center justify-center p-8 text-center">
       <h1 className="text-4xl font-extrabold tracking-tight text-green-600 dark:text-blue-400 sm:text-5xl">
         Welcome to Our Site
       </h1>

@@ -1,6 +1,8 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { Provider } from './components/theme-provider'
+import { Header } from './components/Header'
+import { Footer } from './components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -8,9 +10,6 @@ export const metadata = {
   title: 'Your App',
   description: 'Your app description',
 }
-
-import { Header } from './components/Header'
-import { Footer } from './components/Footer'
 
 export default function RootLayout({
   children,
@@ -24,7 +23,7 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="system"
           enableSystem
-          disableTransitionOnChange
+          storageKey="theme"
         >
           <Header />
           {children}
